@@ -1,0 +1,21 @@
+pandas
+numpy
+streamlit
+plotly
+nltk
+textblob
+vaderSentiment
+gensim
+scikit-learn
+wordcloud
+matplotlib
+
+# Core ML & Data Libraries
+sentence-transformers
+
+# API & Server
+fastapi
+uvicorn[standard]
+
+# Caching
+redis

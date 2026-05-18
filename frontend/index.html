@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Intelligence Analytics</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header anim-header">
+            <h1>Brand Intelligence <span>Real-Time Node</span></h1>
+            <div class="tech-stack">
+                <span class="tech-badge">Python 3.10+</span>
+                <span class="tech-badge">FastAPI</span>
+                <span class="tech-badge">PostgreSQL</span>
+                <span class="tech-badge">Redis</span>
+                <span class="tech-badge">Sentence Transformers</span>
+                <span class="tech-badge">Anime.js</span>
+                <span class="tech-badge">Chart.js</span>
+            </div>
+        </header>
+
+        <main class="grid-container">
+            <aside class="stats-panel anim-panel">
+                <h2>Live Analytics</h2>
+                <div class="stat-card">
+                    <h3>Mentions Analyzed</h3>
+                    <p id="total-count">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Avg. Relevance</h3>
+                    <p id="avg-relevance">0.00</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Highest Category</h3>
+                    <p id="top-category">-</p>
+                </div>
+
+                <div class="input-card anim-panel">
+                    <h3>Analyze Mention</h3>
+                    <textarea id="mention-input" rows="4" style="width: 100%; margin-top: 10px; background: #0b0e14; color: #fff; border: 1px solid #334155; padding: 10px; border-radius: 4px; resize: none;" placeholder="Paste a brand mention here..."></textarea>
+                    <button id="analyze-btn" style="margin-top: 10px; width: 100%; padding: 10px; background: #38bdf8; color: #0f172a; border: none; font-weight: bold; border-radius: 4px; cursor: pointer; transition: background 0.3s;">Analyze Text</button>
+                </div>
+            </aside>
+
+            <section class="feed-panel anim-panel">
+                <h2>Real-Time Mentions Stream</h2>
+                <div class="feed-headers">
+                    <span>Mention</span><span>Category</span><span>Score</span><span>Decision</span>
+                </div>
+                <div id="live-feed" class="live-feed">
+                    <!-- Stream populated via WebSockets -->
+                </div>
+            </section>
+
+            <section class="chart-panel anim-panel">
+                <h2>Relevance Trend</h2>
+                <div class="chart-wrapper"><canvas id="relevanceChart"></canvas></div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
