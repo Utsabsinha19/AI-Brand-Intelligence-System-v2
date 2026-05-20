@@ -228,7 +228,7 @@ All suggestions are reviewed within 48 hours.
 
 <div align="center">
 
-*Last updated: May 2025 · Maintained by the BrandSynapse AI core team*
+*Last updated: May 2026 · Maintained by the BrandSynapse AI core team*
 
 **Every contribution — big or small — moves this platform forward. Thank you. 🙌**
 
